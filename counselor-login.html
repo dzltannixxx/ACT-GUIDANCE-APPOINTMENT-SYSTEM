@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counselor Login - ACT Guidance Appointment System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/act-logo.png" alt="ACT Senior High School Bulacao Campus">
+                
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#appointments">Appointments</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <div class="nav-buttons">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+                <a href="counselor-login.html" class="btn btn-dark">Counselor Login</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="form-section">
+        <div class="form-box">
+            <div class="form-heading">
+                <img src="assets/act-logo.png" alt="ACT" style="width:100%;max-width:300px;margin:0 auto 12px;">
+                <h2>Guidance Counselor Login</h2>
+                <span>Sign in to access the counselor dashboard.</span>
+            </div>
+            <form onsubmit="window.location.href='counselor-dashboard.html'; return false;">
+                <label for="cuser">Username</label>
+                <input id="cuser" type="text" placeholder="Enter counselor username" required>
+                <label for="cpass">Password</label>
+                <input id="cpass" type="password" placeholder="Enter password" required>
+                <button type="submit" class="full-button">Counselor Login</button>
+            </form>
+            <p class="form-bottom"><a href="login.html">Student login</a> &nbsp;|&nbsp; <a href="index.html">Back to home</a></p>
+        </div>
+    </main>
+
+</body>
+</html>

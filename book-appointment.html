@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment - ACT Guidance Appointment System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/act-logo.png" alt="ACT Senior High School Bulacao Campus">
+                
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#appointments">Appointments</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <div class="nav-buttons">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+                <a href="counselor-login.html" class="btn btn-dark">Counselor Login</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="form-section">
+        <div class="form-box large-box">
+            <div class="form-heading">
+                <h2>Book a Guidance Appointment</h2>
+                <span>Enter your information and preferred schedule.</span>
+            </div>
+            <form onsubmit="window.location.href='student-dashboard.html'; return false;">
+                <label for="sname">Student Name</label>
+                <input id="sname" type="text" placeholder="Enter student name" required>
+                <label for="sid">Student ID</label>
+                <input id="sid" type="text" placeholder="Enter student ID" required>
+                <label for="date">Date</label>
+                <input id="date" type="date" required>
+                <label for="time">Time</label>
+                <select id="time" required>
+                    <option value="">Choose time</option>
+                    <option>8:00 AM - 8:30 AM</option>
+                    <option>9:00 AM - 9:30 AM</option>
+                    <option>10:00 AM - 10:30 AM</option>
+                    <option>1:00 PM - 1:30 PM</option>
+                    <option>2:00 PM - 2:30 PM</option>
+                    <option>3:00 PM - 3:30 PM</option>
+                </select>
+                <label for="reason">Reason for Appointment</label>
+                <textarea id="reason" rows="4" placeholder="Enter reason for appointment"></textarea>
+                <button type="submit" class="full-button">Confirm Appointment</button>
+            </form>
+            <p class="form-bottom"><a href="student-dashboard.html">Back to my dashboard</a> &nbsp;|&nbsp; <a href="index.html">Home</a></p>
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - ACT Guidance Appointment System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section class="dashboard-section">
+        <div class="dashboard-container">
+
+            <aside class="sidebar">
+                <div class="sidebar-logo">
+                    <img src="assets/Picture666.png" alt="ACT">
+                    <div>
+                        <strong>STUDENT</strong>
+                        <span>DASHBOARD</span>
+                    </div>
+                </div>
+                <a href="#overview" class="active">Overview</a>
+                <a href="book-appointment.html">Book Appointment</a>
+                <a href="#upcoming">My Appointments</a>
+                <a href="#history">History</a>
+                <a href="index.html">Logout</a>
+            </aside>
+
+            <div class="dashboard-content">
+
+                <div class="dashboard-header" id="overview">
+                    <div>
+                        <h2>My Dashboard</h2>
+                        <p>Welcome, Student.</p>
+                    </div>
+                    <a href="book-appointment.html" class="btn btn-primary">Book an Appointment</a>
+                </div>
+
+                <div class="stats">
+                <div class="stat-card"><span>Upcoming</span><strong>0</strong></div>
+                <div class="stat-card"><span>Pending</span><strong>0</strong></div>
+                <div class="stat-card"><span>Confirmed</span><strong>0</strong></div>
+                <div class="stat-card"><span>Completed</span><strong>0</strong></div>
+                </div>
+
+                <div class="dashboard-card" id="upcoming">
+                    <div class="card-header"><h3>Upcoming Appointments</h3></div>
+                    <div class="table-wrapper">
+                    <table>
+                        <thead><tr><th>Date</th><th>Time</th><th>Counselor</th><th>Reason</th><th>Status</th></tr></thead>
+                        <tbody>
+                            <tr><td colspan="5">You have no upcoming appointments.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+
+                <div class="dashboard-card" id="history">
+                    <div class="card-header"><h3>Appointment History</h3></div>
+                    <div class="table-wrapper">
+                    <table>
+                        <thead><tr><th>Date</th><th>Time</th><th>Counselor</th><th>Reason</th><th>Status</th></tr></thead>
+                        <tbody>
+                            <tr><td colspan="5">No past appointments.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

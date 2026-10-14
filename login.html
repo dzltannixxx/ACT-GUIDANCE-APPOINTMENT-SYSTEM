@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login - ACT Guidance Appointment System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/act-logo.png" alt="ACT Senior High School Bulacao Campus">
+                <span>ACT Bulacao Campus</span>
+            </a>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#services">Services</a>
+                <a href="index.html#appointments">Appointments</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <div class="nav-buttons">
+                <a href="login.html" class="btn btn-outline">Login</a>
+                <a href="register.html" class="btn btn-primary">Register</a>
+                <a href="counselor-login.html" class="btn btn-dark">Counselor Login</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="form-section">
+        <div class="form-box">
+            <div class="form-heading">
+                <img src="assets/act-logo.png" alt="ACT" style="width:70px;margin:0 auto 10px;">
+                <h2>Student Login</h2>
+                <span>Sign in to manage your guidance appointment.</span>
+            </div>
+            <form id="loginForm">
+                <label for="user">Email / Username</label>
+                <input id="user" type="text" placeholder="Enter your email or username" required>
+                <label for="pass">Password</label>
+                <input id="pass" type="password" placeholder="Enter your password" required>
+                <button type="submit" class="full-button">Login</button>
+            </form>
+            <p class="form-bottom">No account yet? <a id="regLink" href="register.html">Register</a></p>
+            <p class="form-bottom"><a href="counselor-login.html">Counselor login</a> &nbsp;|&nbsp; <a href="index.html">Back to home</a></p>
+        </div>
+    </main>
+
+    <script>
+        var allowed = ['book-appointment.html', 'student-dashboard.html'];
+        var next = new URLSearchParams(location.search).get('redirect');
+        var dest = allowed.indexOf(next) > -1 ? next : 'student-dashboard.html';
+        if (allowed.indexOf(next) > -1) {
+            document.getElementById('regLink').href = 'register.html?redirect=' + encodeURIComponent(next);
+        }
+        document.getElementById('loginForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            location.href = dest;
+        });
+    </script>
+
+</body>
+</html>
